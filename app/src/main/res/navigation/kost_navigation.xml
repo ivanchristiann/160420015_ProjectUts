@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kost_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.HomeFragment"
+        android:label="UBAYA KOST"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_detailKost"
+            app:destination="@id/detailKostFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemRating"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.RatingFragment"
+        android:label="Rating Kost"
+        tools:layout="@layout/fragment_rating" >
+        <action
+            android:id="@+id/action_itemRating_to_detailRatingFragment"
+            app:destination="@id/detailRatingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFavorite"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action__to_detailKost"
+            app:destination="@id/detailKostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSearch"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_itemSearch_to_detailKostFragment"
+            app:destination="@id/detailKostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/detailKostFragment"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.DetailKostFragment"
+        android:label="Detail Kost"
+        tools:layout="@layout/fragment_detail_kost">
+        <action
+            android:id="@+id/action_itemHome"
+            app:destination="@id/itemHome" />
+        <argument
+            android:name="idKost"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemAbout"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.AboutFragment"
+        android:label="About UbayaKost"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/detailRatingFragment"
+        android:name="id.ac.ubaya.informatika160420015_projectuts.view.DetailRatingFragment"
+        android:label="Rating"
+        tools:layout="@layout/fragment_detail_rating">
+        <argument
+            android:name="idKostRating"
+            app:argType="string" />
+    </fragment>
+</navigation>

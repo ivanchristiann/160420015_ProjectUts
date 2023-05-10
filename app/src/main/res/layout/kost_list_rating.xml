@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageKostRaitng"
+                android:layout_width="144dp"
+                android:layout_height="178dp"
+                android:elevation="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textAlamatKostRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Rungkut, Surabaya"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/imageKostRaitng"
+                app:layout_constraintTop_toBottomOf="@+id/textNamaKostRating" />
+
+            <TextView
+                android:id="@+id/textHargaKostRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Rp. 100.000"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/imageKostRaitng"
+                app:layout_constraintTop_toBottomOf="@+id/textAlamatKostRating" />
+
+            <TextView
+                android:id="@+id/textJumlahRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:text="3.4"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/imageViewStarRating"
+                app:layout_constraintTop_toBottomOf="@+id/textHargaKostRating" />
+
+            <TextView
+                android:id="@+id/textNamaKostRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Kost Ubaya"
+                android:textSize="26sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toEndOf="@+id/imageKostRaitng"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBarLoadImageRating"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageKostRaitng"
+                app:layout_constraintEnd_toEndOf="@+id/imageKostRaitng"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageKostRaitng"
+                app:layout_constraintVertical_bias="0.492" />
+
+            <ImageView
+                android:id="@+id/imageViewStarRating"
+                android:layout_width="49dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imageKostRaitng"
+                app:layout_constraintTop_toBottomOf="@+id/textHargaKostRating"
+                app:srcCompat="@drawable/ic_baseline_star_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
